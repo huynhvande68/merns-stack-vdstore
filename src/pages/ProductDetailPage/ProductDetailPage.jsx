@@ -1,5 +1,6 @@
 import React from 'react'
 import ProductDetailComponent from '../../components/ProductDetailComponent/ProductDetailComponent'
+import FooterComponent from '../../components/FooterComponent/FooterComponent'
 
 const ProductDetailPage = () => {
   return (

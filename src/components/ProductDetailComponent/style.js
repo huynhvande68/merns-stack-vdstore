@@ -1,5 +1,6 @@
-import { Col, Image } from "antd";
+import { Col, Image, InputNumber } from "antd";
 import styled from "styled-components";
+import ButtonComponent from "../ButtonComponent/ButtonComponent";
 
 export const WrapeerStyleImageSmall = styled(Image)`
     height: 64px;
@@ -30,7 +31,6 @@ export const WrapperPriceTextProduct = styled.div`
     color: #ff4842;
     margin: 3px 0 3px 0;
     font-weight: 400;
-    padding-left: 10px;
 `
 export const WrapperPriceDiscountTextProduct = styled.span`
     font-size: 24px;
@@ -39,9 +39,7 @@ export const WrapperPriceDiscountTextProduct = styled.span`
     margin-left: 10px;
     font-weight: 400;
 `
-export const WrapperQualityProduct = styled.div`
 
-`
 export const WrapperTextPolicy = styled.span`
     font-size: 16px;
     font-weight: 500;
@@ -63,4 +61,63 @@ export const WrapperIconContainer = styled.div`
     box-shadow: 0 2px 5px rgba(75, 73, 73, 0.1);
     text-align: center;
     margin-top: 10px;
+`
+export const WrapperQualityProduct = styled.div`
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    width: 110px;
+    border-radius: 6px;
+    border: 1px solid #919eab52;
+`
+
+export const WrapperBtnQualityProduct = styled.button`
+
+`
+export const WrapperInputNumber = styled(InputNumber)`
+    &.ant-input-number.ant-input-number-sm {
+        width: 30px;
+    }
+`
+export const WrapperTextOptionProduct= styled.div`
+    font-size: 16px;
+    font-weight: 500;
+    margin: 4px 0px;
+`
+export const WrapperAddCartBuyNow = styled.div`
+    display: flex;
+    margin-top: 20px;
+    gap: 40px;
+`
+export const WrapperButtonAddCart = styled(ButtonComponent)`
+  width: calc(50%);
+  padding: 10px 0;
+  border-radius: 8px;
+  background: rgb(255, 193, 7);
+  color: #000;
+  border: none;
+  font-weight: 600;
+  text-align: center;
+
+  &:hover {
+    background: rgb(183, 129, 3) !important;
+    color: #000;
+    span{
+        color: #000 !important;
+    }
+  }
+`
+export const WrapperBtnBuyNow = styled(ButtonComponent)`
+    width: calc(50%);
+    padding: 10px 0;
+    border-radius: 8px;
+    background-color: rgb(0, 69, 255);
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    text-align: center;
+    &:hover {
+        background: rgb(0, 39, 183) !important;
+        color: #fff !important;
+    }
 `

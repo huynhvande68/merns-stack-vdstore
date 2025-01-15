@@ -1,15 +1,17 @@
-import { CheckCircleFilled, ClockCircleFilled, SafetyCertificateFilled, StarFilled } from '@ant-design/icons'
-import { Col, Image, Row } from 'antd'
+import { CheckCircleFilled, ClockCircleFilled, MinusOutlined, PlusOutlined, SafetyCertificateFilled, StarFilled } from '@ant-design/icons'
+import { Col, Image, Input, InputNumber, Row } from 'antd'
 import React from 'react'
 import imgProductSmall from '../../assets/images/iphone-16-pro-max-small.png'
 import imgProduct from '../../assets/images/iphone-16-pro-max.png'
-import { WrapeerStyleImage, WrapeerStyleImageSmall, WrapperIconContainer, WrapperNameStyleNameProduct, WrapperPriceDiscountTextProduct, WrapperPriceTextProduct, WrapperTextPolicy, WrapperTextPolicySmall, WrapperTextSell } from './style'
+import { WrapeerStyleImage, WrapeerStyleImageSmall, WrapperAddCartBuyNow, WrapperBtnBuyNow, WrapperBtnQualityProduct, WrapperButtonAddCart, WrapperIconContainer, WrapperInputNumber, WrapperNameStyleNameProduct, WrapperPriceDiscountTextProduct, WrapperPriceTextProduct, WrapperQualityProduct, WrapperTextOptionProduct, WrapperTextPolicy, WrapperTextPolicySmall, WrapperTextSell } from './style'
+import ButtonComponent from '../ButtonComponent/ButtonComponent'
+
 
 const ProductDetailComponent = () => {
   return (
     <>
     <Row style={{padding: '16px', backgroundColor: '#fff', borderRadius: '8px'}}>
-        <Col span={10}>
+        <Col span={10} style={{border: '1px solid #919eab52', borderRadius: '8px',paddingRight:'30px'}} >
         <Image style={{border: '1px red solid'}}  src={imgProduct} alt='image product' preview={false}/>
         <Row style={{paddingTop: '10px', justifyContent: 'space-between'}}>
             <WrapeerStyleImage span={4}>
@@ -32,7 +34,7 @@ const ProductDetailComponent = () => {
             </WrapeerStyleImage> 
         </Row> 
         </Col>
-        <Col span={14} style={{border: '1px red solid'}}>
+        <Col span={14} style={{paddingLeft:'30px'}} >
             <WrapperNameStyleNameProduct>iPhone 16 Pro Max 256GB | Chính hãng VN/A</WrapperNameStyleNameProduct>
             <div>
             <StarFilled style={{ fontSize: "12px", color: "rgb(253,216,54" }} />
@@ -48,7 +50,26 @@ const ProductDetailComponent = () => {
                     <WrapperPriceDiscountTextProduct>40.000.000đ</WrapperPriceDiscountTextProduct>                  
                 </h1>
             </WrapperPriceTextProduct>
-
+            <div>
+                <WrapperTextOptionProduct>Phiên bản</WrapperTextOptionProduct>
+                <Input size='large' placeholder="iPhone 16 Pro Max 512Gb" />
+            </div>
+            <div style={{display: 'flex', gap: '10px', marginTop: '20px'}}>
+                <WrapperTextOptionProduct>Số lượng</WrapperTextOptionProduct>
+                <WrapperQualityProduct>
+                    <button style={{border:'none',backgroundColor:'transparent'}}>
+                        <MinusOutlined style={{color:'rgb(33, 43, 54)',fontSize:'16px'}} />
+                    </button>
+                        <WrapperInputNumber  min={1} style={{border:'none'}}  defaultValue={1} />
+                    <button style={{border:'none',backgroundColor:'transparent'}}>
+                        <PlusOutlined style={{color:'rgb(33, 43, 54)',fontSize:'16px'}} />   
+                    </button>
+                </WrapperQualityProduct>
+            </div>
+            <WrapperAddCartBuyNow >
+                <WrapperButtonAddCart size='large' textButton='Thêm vào giỏ hàng'/>
+                <WrapperBtnBuyNow size='large' textButton='Mua ngay'/>
+            </WrapperAddCartBuyNow>
 
         </Col>
 
@@ -72,7 +93,7 @@ const ProductDetailComponent = () => {
                 30 ngày đổi trả
                 </WrapperTextPolicy>
                 <WrapperTextPolicySmall>
-                Cam kết đổi trả trong vòng 15 ngày nếu xảy ra lỗi
+                Cam kết đổi trả trong vòng 30 ngày nếu xảy ra lỗi
                 </WrapperTextPolicySmall>
             </WrapperIconContainer>
         </Col>
