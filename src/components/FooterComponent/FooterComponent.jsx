@@ -10,7 +10,7 @@ const FooterComponent = () => {
       <Col span={6}>
         <div>
             <h3>Thông tin liên hệ</h3>
-            <p>Địa chỉ: 19 Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh</p>
+            <p>Địa chỉ: 19 Nguyễn Hữu Thọ, Tân Hưng, Quận 7, HCM</p>
             <p>Hotline: 0909 090 909</p>
             <p>Email: vdstore8386@gmail.com</p>
         </div>
