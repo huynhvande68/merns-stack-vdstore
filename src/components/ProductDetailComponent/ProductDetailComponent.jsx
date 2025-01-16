@@ -1,9 +1,9 @@
 import { CheckCircleFilled, ClockCircleFilled, MinusOutlined, PlusOutlined, SafetyCertificateFilled, StarFilled } from '@ant-design/icons'
-import { Col, Image, Input, InputNumber, Row } from 'antd'
+import { Col, Divider, Image, Input, InputNumber, Row } from 'antd'
 import React from 'react'
 import imgProductSmall from '../../assets/images/iphone-16-pro-max-small.png'
 import imgProduct from '../../assets/images/iphone-16-pro-max.png'
-import { WrapeerStyleImage, WrapeerStyleImageSmall, WrapperAddCartBuyNow, WrapperBtnBuyNow, WrapperBtnQualityProduct, WrapperButtonAddCart, WrapperIconContainer, WrapperInputNumber, WrapperNameStyleNameProduct, WrapperPriceDiscountTextProduct, WrapperPriceTextProduct, WrapperQualityProduct, WrapperTextOptionProduct, WrapperTextPolicy, WrapperTextPolicySmall, WrapperTextSell } from './style'
+import { WrapeerStyleImage, WrapeerStyleImageSmall, WrapperAddCartBuyNow, WrapperBtnBuyNow, WrapperBtnInfoProduct, WrapperBtnQualityProduct, WrapperButtonAddCart, WrapperDetailInfoProduct, WrapperIconContainer, WrapperInputNumber, WrapperNameStyleNameProduct, WrapperPriceDiscountTextProduct, WrapperPriceTextProduct, WrapperQualityProduct, WrapperTextOptionProduct, WrapperTextPolicy, WrapperTextPolicySmall, WrapperTextSell } from './style'
 import ButtonComponent from '../ButtonComponent/ButtonComponent'
 
 
@@ -12,7 +12,9 @@ const ProductDetailComponent = () => {
     <>
     <Row style={{padding: '16px', backgroundColor: '#fff', borderRadius: '8px'}}>
         <Col span={10} style={{border: '1px solid #919eab52', borderRadius: '8px',paddingRight:'30px'}} >
-        <Image style={{border: '1px red solid'}}  src={imgProduct} alt='image product' preview={false}/>
+        <div style={{display: 'flex',justifyContent:'center'}}>
+            <Image style={{border: '1px red solid'}}  src={imgProduct} alt='image product' preview={false}/>
+        </div>
         <Row style={{paddingTop: '10px', justifyContent: 'space-between'}}>
             <WrapeerStyleImage span={4}>
             <WrapeerStyleImageSmall  src={imgProductSmall} alt='img small' preview={false}/>    
@@ -107,8 +109,15 @@ const ProductDetailComponent = () => {
                 Sản phẩm được bảo hành chính hãng theo nhà sản xuất
                 </WrapperTextPolicySmall>
             </WrapperIconContainer>
-        </Col>
+        </Col>  
     </Row>
+    <WrapperDetailInfoProduct>
+        <WrapperBtnInfoProduct type='text' textButton={'Thông số kĩ thuật'}/>
+        <WrapperBtnInfoProduct type='text'textButton={'Mô tả sản phẩm'}/>
+        <WrapperBtnInfoProduct type='text' textButton={'Video'}/>
+        <WrapperBtnInfoProduct type='text' textButton={'Đánh giá'}/>
+        <Divider />
+    </WrapperDetailInfoProduct>
     </>
   )
 }

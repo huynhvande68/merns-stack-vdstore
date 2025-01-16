@@ -121,3 +121,11 @@ export const WrapperBtnBuyNow = styled(ButtonComponent)`
         color: #fff !important;
     }
 `
+export const WrapperDetailInfoProduct = styled.div`
+    margin-top: 20px;
+    
+`
+export const WrapperBtnInfoProduct = styled(ButtonComponent)`
+    font-size: 14px;
+    font-weight: 600;
+`

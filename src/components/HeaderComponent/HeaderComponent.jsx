@@ -35,19 +35,24 @@ const HeaderComponent = () => {
         <Col span={6} style={{ display: "flex", gap: "20px" }}>
           <WrapperHeaderAccount>
             <UserOutlined style={{ fontSize: "25px" }} />
+            <Link to={'/login'}>
             <div>
               <WrapperTextHeaderSmall>Đăng nhập/Đăng kí</WrapperTextHeaderSmall>
               <div>
-                <CaretDownOutlined />
-                <span>Tài khoản</span>
+                <CaretDownOutlined style={{color:'#fff'}}/>
+                <WrapperTextHeaderSmall>Tài khoản</WrapperTextHeaderSmall>
               </div>
             </div>
+            </Link>
           </WrapperHeaderAccount>
           <div>
-            <Badge count={5}size="small">
+            <Link to={'/cart'}>
+            <Badge count={1}size="small">
               <ShoppingCartOutlined style={{ fontSize: "25px", color: "#fff" }} />
             </Badge>
+            
             <WrapperTextHeaderSmall>Giỏ hàng</WrapperTextHeaderSmall>
+            </Link>
           </div>
         </Col>
       </WrapperHeader>

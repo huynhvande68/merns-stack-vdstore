@@ -59,6 +59,12 @@ const routes = [
 
     },
     {
+        path: '/search',
+        page: CartPage,
+        isShowHeader: true,
+
+    },
+    {
         path: '*',
         page: NotFoundPage,
         isShowHeader: true,

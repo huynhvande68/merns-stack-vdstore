@@ -14,8 +14,8 @@ export const WrapperTypeProduct = styled.div`
 
 export const WrapperProductList = styled.div`
   font-size: 20px;
-  margin: 10px 0;
   font-weight: 600;
+  padding: 16px;
 `;
 export const WrapperProductListCetegory = styled.div`
   height: 22px;
@@ -56,4 +56,12 @@ export const WrapperBottonMore = styled(ButtonComponent)`
       color: #fff;
     }
   }
-`
+`;
+export const WrapperTextTitleProduct = styled.div`
+  display: flex;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(75, 73, 73, 0.1);
+  margin-top:10px;
+  margin-bottom: 10px;
+`;
