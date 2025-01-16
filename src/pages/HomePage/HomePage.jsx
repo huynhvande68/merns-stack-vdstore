@@ -19,7 +19,7 @@ const homePage = () => {
 
   return (
     <>
-      <div style={{ padding: "0 120px" }}>
+      <div style={{ padding: "0 120px" ,backgroundColor:'#efefef'}}>
         <WrapperTypeProduct>
           {arr.map((item) => {
             return <TypeProduct name={item} key={item} />;

@@ -6,6 +6,7 @@ import TypeProductPage from "../pages/TypeProductPage/TypeProductPage";
 import SignInPage from "../pages/SignInPage/SignInPage";
 import SignUpPage from "../pages/SignUpPage/SignUpPage";
 import ProductDetailPage from "../pages/ProductDetailPage/ProductDetailPage";
+import CartPage from "../pages/CartPage/CartPage";
 
 
 const routes = [
@@ -34,13 +35,13 @@ const routes = [
 
     },
     {
-        path: '/sign-in',
+        path: '/login',
         page: SignInPage,
         isShowHeader: true,
 
     },
     {
-        path: '/sign-up',
+        path: '/register',
         page: SignUpPage,
         isShowHeader: true,
 
@@ -48,6 +49,12 @@ const routes = [
     {
         path: '/product-detail',
         page: ProductDetailPage,
+        isShowHeader: true,
+
+    },
+    {
+        path: '/cart',
+        page: CartPage,
         isShowHeader: true,
 
     },

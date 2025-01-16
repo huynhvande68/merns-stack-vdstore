@@ -4,7 +4,6 @@ export const WrapperFooterComponent = styled.div`
     background-color: #efefef;
     padding: 40px 0;
     border-top: 1px solid #ddd;
-
 `
 
 export const FooterLink = styled.a`
